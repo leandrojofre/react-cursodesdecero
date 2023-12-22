@@ -1,0 +1,12 @@
+{
+   "editor.tabSize": 5,
+   "editor.wordWrap": "on",
+   "editor.guides.bracketPairs": "active",
+   "editor.useTabStops": false,
+   "editor.insertSpaces": false,
+   "breadcrumbs.symbolSortOrder": "type",
+   "files.eol": "\n",
+   "liveServer.settings.port": 5501,
+   "files.autoSave": "afterDelay",
+   "terminal.integrated.defaultProfile.windows": "Git Bash"
+}
