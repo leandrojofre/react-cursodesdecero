@@ -14,5 +14,10 @@
 }
 
 button {
-	-webkit-text-fill-color: #242424;
+  -webkit-text-fill-color: #242424;
+}
+
+form input {
+  display: block;
+  margin: 2px;
 }
