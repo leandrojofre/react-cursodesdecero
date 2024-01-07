@@ -1,3 +1,7 @@
+Curso de React | Aprende React desde cero - https://youtu.be/iQVMRyk--cw?si=G06PTKHlSjQoICIn
+
+---
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
