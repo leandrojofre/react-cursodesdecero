@@ -1,22 +1,41 @@
-import React, { useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
+import { useNavigate, useParams } from "react-router-dom";
 
 export const ComponenteForm = () => {
-	const [EstadoCiudad, setEstadoCiudad] = useState({});
+	const ciudadUrl = useParams();
+	
+	const objUrl = {
+		ciudad: ciudadUrl.ciudad,
+		provincia: "",
+		pais: "",
+	};
 
+	const [EstadoCiudad, setEstadoCiudad] = useState(objUrl);
+	const divForm = useRef();
+	const redirigir = useNavigate();
+
+	useEffect(() => {
+		setEstadoCiudad(objUrl);
+	}, [ciudadUrl.ciudad]);
+	
 	const recibirForm = (e) => {
 		e.preventDefault();
-
+		
 		let objetoForm = {
 			ciudad: e.target.ciudad.value,
 			provincia: e.target.provincia.value,
 			pais: e.target.pais.value
 		}
+		let url = "/form/" + objetoForm.ciudad;
 
 		setEstadoCiudad(objetoForm);
+		redirigir(url);
+
+		divForm.current.classList.add("div-form");
 	}
 
 	return (
-		<div>
+		<div ref={divForm}>
 			<h3>Componente Form</h3>
 			<h4>La ciudad es {EstadoCiudad.ciudad}</h4>
 			<h4>La provincia es {EstadoCiudad.provincia}</h4>
