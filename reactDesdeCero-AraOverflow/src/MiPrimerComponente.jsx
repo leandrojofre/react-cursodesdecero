@@ -5,7 +5,7 @@ export const MiPrimerComponente = () => {
 
 	return (
 		<>
-			<h1>Numero: {numero}</h1>
+			<h3>Numero: {numero}</h3>
 		</>
 	)
 }

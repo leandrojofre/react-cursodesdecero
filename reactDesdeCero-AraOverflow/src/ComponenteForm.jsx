@@ -1,9 +1,9 @@
 import React, { useState } from "react"
 
 export const ComponenteForm = () => {
-	const [estadoCiudad, setEstadoCiudad] = useState({});
+	const [EstadoCiudad, setEstadoCiudad] = useState({});
 
-	const recibidoForm = (e) => {
+	const recibirForm = (e) => {
 		e.preventDefault();
 
 		let objetoForm = {
@@ -17,11 +17,11 @@ export const ComponenteForm = () => {
 
 	return (
 		<div>
-			<h2>Componente Form</h2>
-			<h3>La ciudad es {estadoCiudad.ciudad}</h3>
-			<h3>La provincia es {estadoCiudad.provincia}</h3>
-			<h3>El pais es {estadoCiudad.pais}</h3>
-			<form onSubmit={recibidoForm}>
+			<h3>Componente Form</h3>
+			<h4>La ciudad es {EstadoCiudad.ciudad}</h4>
+			<h4>La provincia es {EstadoCiudad.provincia}</h4>
+			<h4>El pais es {EstadoCiudad.pais}</h4>
+			<form onSubmit={recibirForm}>
 				<input type="text" name="ciudad" placeholder="Ciudad" />
 				<input type="text" name="provincia" placeholder="Provincia" />
 				<input type="text" name="pais" placeholder="País" />

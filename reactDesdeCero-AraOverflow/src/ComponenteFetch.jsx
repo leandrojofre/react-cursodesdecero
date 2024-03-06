@@ -18,8 +18,7 @@ export const ComponenteFetch = () => {
 
 	return (
 		<>
-			<h2>Componente Fetch</h2>
-
+			<h3>Componente Fetch</h3>
 			<ul>
 				{pokemons.map(pokemon => {
 					return (

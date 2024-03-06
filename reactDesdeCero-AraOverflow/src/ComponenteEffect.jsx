@@ -4,6 +4,14 @@ export const ComponenteEffect = () => {
 	const [nombre, setNombre] = useState("Leandro");
 	const [apellido, setApellido] = useState("Jofré");
 
+	function numeroRandom(min, max) {
+		return Math.random() * (max - min) + min;
+	}
+
+	function cambiarFondo(e) {
+		e.target.style.backgroundColor = `rgba(${numeroRandom(0, 255)}, ${numeroRandom(0, 255)}, ${numeroRandom(0, 255)}, 1)`
+	}
+
 	// Corchetes genera que se ejecute solo al cargarse
 	useEffect(() => {
 		console.log("Componente cargado o modificado");
@@ -24,9 +32,9 @@ export const ComponenteEffect = () => {
 
 	return (
 		<div>
-			<h2>Usando el use Effect</h2>
+			<h3>Usando el use Effect</h3>
 			{nombre} {apellido} <br />
-			<input type="text" onChange={cambiarNombre} />
+			<input type="text" onChange={cambiarNombre} onFocus={cambiarFondo}/>
 			<button onClick={cambiarApellido}>Cambiar Apellido</button>
 		</div>
 	)

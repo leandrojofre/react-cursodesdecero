@@ -9,10 +9,12 @@ import { ComponenteEstado } from './ComponenteEstado,.jsx'
 import { ComponenteEffect } from './ComponenteEffect.jsx'
 import { ComponenteFetch } from './ComponenteFetch.jsx'
 import { ComponenteForm } from './ComponenteForm.jsx'
+import { RutasGenerales } from './RutasGenerales.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <MiPrimerComponente />
+    <RutasGenerales></RutasGenerales>
+    {/* <MiPrimerComponente />
     <ComponenteArray />
     <ComponenteProps ciudad="Córdoba" provincia="Córdoba" codPostal={1234}>
       <h2>España</h2>
@@ -21,6 +23,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <ComponenteEstado />
     <ComponenteEffect />
     <ComponenteFetch />
-    <ComponenteForm />
+    <ComponenteForm /> */}
   </React.StrictMode>,
 )
